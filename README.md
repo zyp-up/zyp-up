@@ -11,7 +11,7 @@
 👨‍💻 我是一名充满热情的开发者  
 🌱 不断学习和探索新技术  
 💡 喜欢解决有趣的问题  
-📫 联系方式：[Email](mailto:your-email@example.com)
+📫 联系方式：[Email](mailto:yunpengZhangup@outlook.com)
 
 ---
 
@@ -49,117 +49,126 @@
 ## 📊 GitHub 统计
 
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=zyp-up&show_icons=true&theme=radical" alt="GitHub Stats" />
 </p>
 
 <p align="center">
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=radical" alt="GitHub Streak" />
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=zyp-up&theme=radical" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=radical" alt="Top Languages" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zyp-up&layout=compact&theme=radical" alt="Top Languages" />
 </p>
 
 ---
 
 ## ⏱️ 代码时间统计
 
-<table>
-  <tr>
-    <td align="center">
-      <strong>编程语言</strong><br/>
-      <code>时间统计</code>
-    </td>
-    <td align="center">
-      <strong>占比</strong>
-    </td>
-  </tr>
-  <tr>
-    <td>🐍 Python</td>
-    <td>41.84% (8 hrs 3 mins)</td>
-  </tr>
-  <tr>
-    <td>📝 Markdown</td>
-    <td>28.68% (5 hrs 31 mins)</td>
-  </tr>
-  <tr>
-    <td>🐹 Go</td>
-    <td>14.48% (2 hrs 47 mins)</td>
-  </tr>
-  <tr>
-    <td>🌐 HTML</td>
-    <td>3.32% (38 mins)</td>
-  </tr>
-  <tr>
-    <td>📋 YAML</td>
-    <td>3.02% (34 mins)</td>
-  </tr>
-</table>
+> 自动统计你的编码时间分布（由 [WakaTime](https://wakatime.com/) 驱动）
+
+[![wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=zyp-up&theme=radical)](https://wakatime.com)
+
+**如何启用自动统计：**
+1. 访问 [WakaTime](https://wakatime.com/) 并注册账号
+2. 在你的编辑器中安装 WakaTime 插件
+3. 将上面的 `YOUR_WAKATIME_USERNAME` 替换为你的 WakaTime 用户名
+4. 统计会自动更新！
 
 ---
 
 ## ⚡ 最近活动
 
-<table>
-  <tr>
-    <td align="left">
-      💪 <strong>Opened PR #3845</strong> in webpack/webpack.js.org
-    </td>
-  </tr>
-  <tr>
-    <td align="left">
-      👥 <strong>Commented on #7</strong> in madlabsinc/teachcode
-    </td>
-  </tr>
-  <tr>
-    <td align="left">
-      🎉 <strong>Merged PR #64</strong> in jamesgeorge007/Crypto-Compare
-    </td>
-  </tr>
-  <tr>
-    <td align="left">
-      🎉 <strong>Merged PR #181</strong> in madlabsinc/mevn-cli
-    </td>
-  </tr>
-  <tr>
-    <td align="left">
-      ❌ <strong>Closed issue #180</strong> in madlabsinc/mevn-cli
-    </td>
-  </tr>
-</table>
+> 自动显示你最近的 GitHub 活动（实时更新）
+
+使用以下代码之一自动展示最近活动：
+
+### 方案 A: 使用 Activity Box（推荐）
+```markdown
+[![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=zyp-up&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
+```
+
+### 方案 B: 使用 GitHub API 自动生成
+```markdown
+<a href="https://github.com/zyp-up">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=zyp-up&show_icons=true&include_all_commits=true&theme=radical" alt="GitHub stats" />
+</a>
+```
+
+**替换 `YOUR_USERNAME` 为你的 GitHub 用户名，活动会自动显示！**
 
 ---
 
 ## 📈 详细统计信息
 
-<details open>
-  <summary><strong>点击查看更多统计</strong></summary>
+### 自动统计卡片（实时更新）
 
-  ### 🏆 成就统计
-  - ⭐ **Total Stars**: 813
-  - 🔀 **Forks**: 1,343
-  - 🎯 **All-time Contributions**: 879
-  - 📝 **Lines of Code Changed**: 939,096
-  - 👀 **Repository Views** (past two weeks): 456
-  - 📦 **Repositories with Contributions**: 52
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=zyp-up&show_icons=true&include_all_commits=true&count_private=true&theme=radical" alt="GitHub Stats" />
+</p>
 
-  ### 🎓 个人成就
-  - 📚 **3.09k** Contributions on GitHub
-  - 📂 **34** Public Repositories
-  - ⏰ **Joined GitHub** 9 years ago
-  - 📧 **Email**: your-email@example.com
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zyp-up&layout=compact&hide_border=true&theme=radical" alt="Top Languages" />
+</p>
 
-</details>
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=zyp-up&theme=radical" alt="GitHub Streak" />
+</p>
+
+> **只需将所有 `YOUR_USERNAME` 替换为你的 GitHub 用户名，其余数据会自动更新！** 🎉
 
 ---
 
 ## 🎨 3D 贡献度可视化
 
+> 使用 GitHub Actions 自动生成和更新你的 3D 贡献度图表
+
+### 📋 配置步骤：
+
+1. **创建 `.github/workflows/3d-contrib.yml` 文件**：
+   ```yaml
+   name: GitHub-Profile-3D-Contrib
+
+   on:
+     schedule:
+       - cron: "0 0 * * 0"
+     workflow_dispatch:
+
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       name: generate-github-profile-3d-contrib
+       steps:
+         - uses: actions/checkout@v3
+         - uses: yoshi389111/github-profile-3d-contrib@0.7.0
+           env:
+             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             USERNAME: ${{ github.repository_owner }}
+         - name: Push
+           run: |
+             git config user.name github-actions
+             git config user.email github-actions@github.com
+             git add -A
+             git commit -m "generated 3D contrib"
+             git push
+   ```
+
+2. **在 README 中添加以下代码**：
+   ```markdown
+   ![](./profile-3d-contrib/profile-night-rainbow.svg)
+   ```
+
+3. **将下面的行添加到你的 README 中**：
+
 <p align="center">
-  <em>使用 <a href="https://github.com/yoshi389111/github-profile-3d-contrib">GitHub Profile 3D Contrib</a> 生成 3D 贡献度图表</em>
+  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph">
 </p>
 
-> 💡 **提示**: 访问你的个人账户，使用 GitHub Actions 自动生成 3D 贡献度可视化，让你的贡献度数据以全新的视角展现！
+> 💡 **提示**：第一次运行 Actions 后，会生成 `profile-3d-contrib` 文件夹，其中包含生成的图表。你可以选择不同的主题，如：
+> - `profile-night-rainbow.svg` (彩虹主题)
+> - `profile-gitblock.svg` (Git Block 主题)
+> - `profile-night.svg` (深色主题)
+> 
+> 更多主题详见 [GitHub Profile 3D Contrib](https://github.com/yoshi389111/github-profile-3d-contrib)
 
 ---
 
@@ -172,7 +181,7 @@
   <a href="https://twitter.com/your-profile">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
   </a>
-  <a href="mailto:your-email@example.com">
+  <a href="mailto:yunpengZhangup@outlook.com">
     <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
   </a>
   <a href="https://your-portfolio.com">
@@ -185,5 +194,5 @@
 ## ⭐ 如果你喜欢我的项目，请给我一个 Star！
 
 <div align="center">
-  Made with ❤️ by You
+  Made with ❤️ by <a href="https://github.com/zyp-up">zyp-up</a>
 </div>
