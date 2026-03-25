@@ -62,6 +62,107 @@
 
 ---
 
+## ⏱️ 代码时间统计
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>编程语言</strong><br/>
+      <code>时间统计</code>
+    </td>
+    <td align="center">
+      <strong>占比</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>🐍 Python</td>
+    <td>41.84% (8 hrs 3 mins)</td>
+  </tr>
+  <tr>
+    <td>📝 Markdown</td>
+    <td>28.68% (5 hrs 31 mins)</td>
+  </tr>
+  <tr>
+    <td>🐹 Go</td>
+    <td>14.48% (2 hrs 47 mins)</td>
+  </tr>
+  <tr>
+    <td>🌐 HTML</td>
+    <td>3.32% (38 mins)</td>
+  </tr>
+  <tr>
+    <td>📋 YAML</td>
+    <td>3.02% (34 mins)</td>
+  </tr>
+</table>
+
+---
+
+## ⚡ 最近活动
+
+<table>
+  <tr>
+    <td align="left">
+      💪 <strong>Opened PR #3845</strong> in webpack/webpack.js.org
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      👥 <strong>Commented on #7</strong> in madlabsinc/teachcode
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      🎉 <strong>Merged PR #64</strong> in jamesgeorge007/Crypto-Compare
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      🎉 <strong>Merged PR #181</strong> in madlabsinc/mevn-cli
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      ❌ <strong>Closed issue #180</strong> in madlabsinc/mevn-cli
+    </td>
+  </tr>
+</table>
+
+---
+
+## 📈 详细统计信息
+
+<details open>
+  <summary><strong>点击查看更多统计</strong></summary>
+
+  ### 🏆 成就统计
+  - ⭐ **Total Stars**: 813
+  - 🔀 **Forks**: 1,343
+  - 🎯 **All-time Contributions**: 879
+  - 📝 **Lines of Code Changed**: 939,096
+  - 👀 **Repository Views** (past two weeks): 456
+  - 📦 **Repositories with Contributions**: 52
+
+  ### 🎓 个人成就
+  - 📚 **3.09k** Contributions on GitHub
+  - 📂 **34** Public Repositories
+  - ⏰ **Joined GitHub** 9 years ago
+  - 📧 **Email**: your-email@example.com
+
+</details>
+
+---
+
+## 🎨 3D 贡献度可视化
+
+<p align="center">
+  <em>使用 <a href="https://github.com/yoshi389111/github-profile-3d-contrib">GitHub Profile 3D Contrib</a> 生成 3D 贡献度图表</em>
+</p>
+
+> 💡 **提示**: 访问你的个人账户，使用 GitHub Actions 自动生成 3D 贡献度可视化，让你的贡献度数据以全新的视角展现！
+
+---
+
 ## 🌐 联系方式
 
 <p align="center">
