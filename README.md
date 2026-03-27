@@ -57,7 +57,7 @@
       <img src="./metrics.licenses.ratio.svg" alt="Licenses Ratio" width="100%">
     </td>
     <td width="50%" align="center">
-      <img src="./metrics.acchievements.svg" alt="LeetCode" width="100%">
+      <img src="./metrics.acchievements.svg" alt="achievements" width="100%">
     </td>
   </tr>
 </table>
