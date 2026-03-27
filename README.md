@@ -24,15 +24,21 @@
       <img src="./metrics.base.svg" alt="Base Metrics" width="100%">
     </td>
   </tr>
+
   <!-- 第1行：Topics + Languages -->
   <tr>
     <td width="50%" align="center">
-      <img src="./metrics.topics.svg" alt="Starred Topics" width="100%">
+      <img src="./metrics.topics.icons.svg" alt="Starred Topics Icons" width="100%">
+      <br>
+      <img src="./metrics.topics.labels.svg" alt="Starred Topics Labels" width="100%">
     </td>
     <td width="50%" align="center">
-      <img src="./metrics.languages.svg" alt="Languages" width="100%">
+      <img src="./metrics.languages.indepth.svg" alt="Languages Indepth" width="100%">
+      <br>
+      <img src="./metrics.languages.recent.svg" alt="Languages Recent" width="100%">
     </td>
   </tr>
+
   <!-- 第2行：日历 + 编码习惯 -->
   <tr>
     <td width="50%" align="center">
@@ -44,10 +50,13 @@
       <img src="./metrics.habits.charts.svg" alt="Coding Habits Charts" width="100%">
     </td>
   </tr>
+
   <!-- 第3行：许可证 + LeetCode -->
   <tr>
     <td width="50%" align="center">
-      <img src="./metrics.licenses.svg" alt="Licenses" width="100%">
+      <img src="./metrics.licenses.svg" alt="Licenses Permissions" width="100%">
+      <br>
+      <img src="./metrics.licenses.ratio.svg" alt="Licenses Ratio" width="100%">
     </td>
     <td width="50%" align="center">
       <img src="./metrics.leetcode.svg" alt="LeetCode" width="100%">
