@@ -1,0 +1,54 @@
+# Metrics Configuration
+# 详见: https://github.com/lowlighter/metrics
+
+# 基本配置
+user: zyp-up
+template: classic
+base: header,activity,community,repositories
+config_timezone: Asia/Shanghai
+
+# 🎨 主题设置
+config_display: large
+config_padding: 0,8
+
+# 📊 插件配置
+
+# 1️⃣ 等距提交日历 (Isometric commit calendar)
+plugin_isocalendar: yes
+plugin_isocalendar_duration: full-year
+
+# 2️⃣ 编程语言统计 (Most used languages)
+plugin_languages: yes
+plugin_languages_limit: 10
+plugin_languages_threshold: 0%
+plugin_languages_colors: github
+
+# 3️⃣ 标星话题 (Starred topics)
+plugin_topics: yes
+plugin_topics_limit: 15
+plugin_topics_mode: icons
+
+# 4️⃣ 仓库许可证 (Repository licenses)
+plugin_licenses: yes
+plugin_licenses_ratio: yes
+
+# 5️⃣ 编码习惯 (Coding habits)
+plugin_habits: yes
+plugin_habits_facts: yes
+plugin_habits_charts: yes
+plugin_habits_trim: yes
+
+# 6️⃣ 问题/PR跟进 (Follow-up of issues and pull requests)
+plugin_followup: yes
+plugin_followup_sections: repositories
+
+# 7️⃣ 最近活动 (Recent activity)
+plugin_activity: yes
+plugin_activity_limit: 5
+plugin_activity_visibility: all
+plugin_activity_days: 14
+
+# 8️⃣ 最近文章 (Recent posts)
+plugin_posts: yes
+plugin_posts_source: dev.to
+plugin_posts_limit: 4
