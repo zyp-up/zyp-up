@@ -135,5 +135,5 @@ jobs:
           user: zyp-up
           base: ""
           plugin_achievements: yes
-          plugin_achievements_display: compact
+          plugin_achievements_display: detailed
           plugin_achievements_threshold: C
