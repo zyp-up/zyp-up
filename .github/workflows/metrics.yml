@@ -128,7 +128,7 @@ jobs:
 
       # ===== 第3行右：Achievements =====
       - name: 🏆 Achievements
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           filename: metrics.achievements.svg
           token: ${{ secrets.METRICS_TOKEN }}
