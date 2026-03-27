@@ -20,5 +20,33 @@ jobs:
           filename: metrics.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           user: zyp-up
-          config_file: ./metrics.config.yml
+          template: classic
+          base: header, activity, community, repositories
+          config_timezone: Asia/Shanghai
+          config_display: large
+          config_padding: 0, 8
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          plugin_languages: yes
+          plugin_languages_limit: 10
+          plugin_languages_threshold: 0%
+          plugin_languages_colors: github
+          plugin_topics: yes
+          plugin_topics_limit: 15
+          plugin_topics_mode: icons
+          plugin_licenses: yes
+          plugin_licenses_ratio: yes
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_trim: yes
+          plugin_followup: yes
+          plugin_followup_sections: repositories
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_visibility: all
+          plugin_activity_days: 14
+          plugin_posts: yes
+          plugin_posts_source: dev.to
+          plugin_posts_limit: 4
           
