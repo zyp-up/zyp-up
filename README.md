@@ -48,21 +48,21 @@
 
 ## 📊 GitHub Metrics（实时统计）
 
-> 使用 [GitHub Metrics](https://github.com/lowlighter/metrics) 生成详细的 GitHub 统计信息
+> 使用 [GitHub Metrics](https://github.com/lowlighter/metrics) 生成详细的 GitHub 统计信息 - 支持 30+ 个插件，200+ 个自定义选项
 
 ### 📈 主要统计
 <p align="center">
-  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai" alt="GitHub Metrics" />
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&base=header%2Factivity%2Ccommunity%2Crepositories%2Clanguages" alt="GitHub Metrics" />
 </p>
 
-### 🗣️ 完整统计
+### 🗣️ 以网格形式展示
 <p align="center">
-  <img src="https://metrics.lecoq.io/zyp-up?template=github-dark&config.timezone=Asia%2FShanghai&config.display=large" alt="Full Metrics" />
+  <img src="https://metrics.lecoq.io/zyp-up?template=grid&config.timezone=Asia%2FShanghai&config.display=large" alt="Grid Metrics" />
 </p>
 
-### 📊 详细分析
+### 📊 详细语言分布
 <p align="center">
-  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&config.display=large&repositories=.starred" alt="Repositories" />
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&languages=1&base=" alt="Languages" />
 </p>
 
 ---
@@ -71,114 +71,201 @@
 
 > 自动统计你的编码时间分布（由 [WakaTime](https://wakatime.com/) 驱动）
 
-### 配置步骤：
+### 快速启用：
 
-1. 访问 [WakaTime](https://wakatime.com/) 并注册账号
-2. 在你的编辑器中安装 WakaTime 插件
-3. 在 Metrics 中启用 WakaTime 插件：
+1. **访问 [WakaTime](https://wakatime.com/) 并注册账号**
+2. **在你的编辑器(VS Code/Sublime/IntelliJ 等)中安装 WakaTime 插件**
+3. **在 Metrics 中启用 WakaTime**
 
+在上面的 `.github/workflows/metrics.yml` 中添加以下行：
+
+```yaml
+          # 插件:WakaTime (需要 WakaTime API Key)
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 7
+          plugin_wakatime_sections: time,languages,projects
+          plugin_wakatime_limit: 5
 ```
-https://metrics.lecoq.io/zyp-up?template=classic&wakatime=YOUR_WAKATIME_API_KEY
-```
 
-4. 用你的 WakaTime API Key 替换 `YOUR_WAKATIME_API_KEY`（在 WakaTime 设置中获取）
-5. 统计会自动更新在 metrics 中！
+4. **在 GitHub 仓库设置中添加 secrets**：
+   - 进入 Settings → Secrets and variables → Actions
+   - 添加 `WAKATIME_TOKEN`（从 WakaTime 设置中复制你的 API Key）
+
+5. **重新运行 workflow，WakaTime 统计就会自动显示！**
 
 ---
 
 ## ⚡ 最近活动
 
-> 自动显示你最近的 GitHub 活动和贡献统计（实时更新）
+> Metrics 会自动显示你最近的 GitHub 活动和贡献统计，实时更新！
 
-<p align="center">
-  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&activity=false&repositories=false" alt="Activity" />
-</p>
+每小时自动更新以下信息：
+- 📊 **提交记录** (Commits)
+- 🔀 **拉取请求** (Pull Requests)  
+- 📝 **Issue** 
+- ⭐ **Stars** 获赞情况
+- 🍴 **Forks** 被fork情况
+- 📈 **编程语言排行**
+- 📚 **仓库列表**
 
-> **Metrics 会自动显示你的：**
-> - 📊 提交记录
-> - 🔀 拉取请求
-> - 📝 Issues
-> - ⭐ Stars
-> - 🍴 Forks
-> - 等等...
+**以上所有内容都包含在上面的 Metrics 卡片中！** 👆
 
 ---
 
 ## 📈 高级统计选项
 
-> Metrics 支持 30+ 个插件，可以展示更多详细信息。以下是一些示例配置：
+> Metrics 支持 30+ 个插件，可以展示更多详细信息。以下是一些配置完整的示例：
 
-### 💾 多个 Metrics 卡片配置
+### 💾 推荐的 Metrics 卡片
 
-#### 卡片 1: 完整统计
+#### 卡片 1: 完整仓库分析
+<p align="center">
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&base=header%2Crepositories" alt="Repositories" />
+</p>
+
+#### 卡片 2: 活动日历 + 贡献
+<p align="center">
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&base=header%2Cactivity" alt="Activity" />
+</p>
+
+#### 卡片 3: 社交和关注者
+<p align="center">
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&base=header%2Ccommunity" alt="Community" />
+</p>
+
+### 🎨 可用的模板
+
 ```markdown
-https://metrics.lecoq.io/zyp-up?template=github-dark&config.timezone=Asia%2FShanghai
+# 模板名称              | 描述
+classic               | 经典黑色背景
+github-dark           | GitHub 深色风格  
+grid                  | 网格布局
+devcard               | 个人卡片
+terminal              | 终端风格
+compact               | 紧凑布局
+minimalist            | 极简风格
 ```
 
-#### 卡片 2: 语言分布 + 活动
+### 🔧 常用配置参数
+
 ```markdown
-https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&languages=1
+# 基础参数
+base=header           # 显示用户头部信息
+base=repositories     # 显示仓库信息
+base=activity         # 显示活动信息
+base=community        # 显示社区信息
+
+# 组合参数（用逗号分隔）
+base=header,repositories,languages
+
+# 其他有用参数
+config.timezone=Asia/Shanghai    # 时区
+config.display=large             # 大尺寸显示
+repositories=starred             # 显示已星标仓库
+languages=1                       # 显示编程语言
 ```
 
-#### 卡片 3: 提交历史
+### 📝 快速示例 URL
+
+直接复制以下 URL 到 README 中：
+
 ```markdown
-https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&repositories=0
+# 简洁版
+https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai
+
+# 详细版
+https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&base=header%2Cactivity%2Crepositories%2Clanguages
+
+# 网格版
+https://metrics.lecoq.io/zyp-up?template=grid&config.timezone=Asia%2FShanghai
+
+# 个人卡片版
+https://metrics.lecoq.io/zyp-up?template=devcard&config.timezone=Asia%2FShanghai
 ```
-
-### 🎨 自定义配置
-
-访问 [Metrics 配置文档](https://metrics.lecoq.io/about) 了解所有可用的参数和插件！
-
-可用的插件包括：
-- 📊 **基础统计** - Stars, Forks, Issues, PRs
-- 📈 **语言统计** - 编程语言分布
-- 🕐 **活动日历** - 提交热力图
-- 🌟 **排行榜** - 最赞的仓库
-- 💬 **最近评论** - 最近的活动
-- 🔗 **社交** - 关注者信息
-- 等等...
 
 ---
 
-## 🤖 自动更新 Metrics（推荐）
+## 🤖 自动更新 Metrics（推荐 - 每小时自动刷新）
 
-> 使用 GitHub Actions 自动生成和更新 Metrics 图片，每小时自动刷新一次
+> 使用 GitHub Actions 自动生成和更新 Metrics 图片，保持你的 GitHub 主页始终最新！
 
 ### 配置步骤：
 
-1. **创建 `.github/workflows/metrics.yml` 文件**：
+1. **在你的特殊仓库（username/username）中创建文件夹和文件：**
+   - 创建 `.github/workflows/` 目录
+   - 在其中创建 `metrics.yml` 文件
+
+2. **将以下内容复制到 `.github/workflows/metrics.yml`：**
 
 ```yaml
 name: Metrics
 
 on:
   schedule:
-    - cron: "0 * * * *"
-  workflow_dispatch:
+    - cron: "0 * * * *"  # 每小时运行一次
+  workflow_dispatch:     # 允许手动触发
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: zyp-up
+          
+          # 基础配置
           template: classic
-          base: ""
+          base: header,activity,repositories,languages
           config_timezone: Asia/Shanghai
+          
+          # 输出配置
           output_action: commit
+          output_condition: data-changed
+          
+          # 插件:代码语言
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          
+          # 插件:最近活动
+          plugin_activity: yes
+          
+          # 插件:许可证信息  
+          plugin_licenses: yes
 ```
 
-2. **在 README 中使用生成的图片**：
+3. **提交并推送这个文件**：
+```bash
+git add .github/workflows/metrics.yml
+git commit -m "Add GitHub Metrics workflow"
+git push
+```
+
+4. **稍等片刻，GitHub Actions 会自动运行，生成 metrics 图片**
+
+5. **在你的 README 中添加以下代码来显示 metrics**：
 
 ```markdown
-![Metrics](./github-metrics/metrics.svg)
+![Metrics](./metrics.svg)
 ```
 
-3. **Commit 并 Push**，之后 GitHub Actions 会自动每小时生成 Metrics！
+完整示例（在 README 中）：
+```markdown
+<p align="center">
+  <img src="./metrics.svg" alt="GitHub Metrics" />
+</p>
+```
+
+### ✨ 了解更多模板
+
+访问 [Metrics 官方](https://metrics.lecoq.io/) 了解所有可用的：
+- **8+ 个模板** - classic, grid, devcard, terminal 等
+- **30+ 个插件** - 语言、活动、贡献等
+- **200+ 个选项** - 高度自定义
 
 ---
 
