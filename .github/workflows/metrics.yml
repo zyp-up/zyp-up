@@ -50,7 +50,7 @@ jobs:
 
       # ===== 第1行右：Languages =====
       - name: 🈷️ Languages
-        uses: lowlighter/metrics@latest
+        uses: dkhokhlov/metrics@master
         with:
           filename: metrics.languages.most.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -63,7 +63,7 @@ jobs:
 
       # ===== 第2行左：等距日历（全年） =====
       - name: 📅 Isometric Calendar (Full Year)
-        uses: lowlighter/metrics@latest
+        uses: dkhokhlov/metrics@master
         with:
           filename: metrics.isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
