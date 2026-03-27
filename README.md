@@ -33,9 +33,7 @@
       <img src="./metrics.topics.labels.svg" alt="Starred Topics Labels" width="100%">
     </td>
     <td width="50%" align="center">
-      <img src="./metrics.languages.indepth.svg" alt="Languages Indepth" width="100%">
-      <br>
-      <img src="./metrics.languages.recent.svg" alt="Languages Recent" width="100%">
+      <img src="./metrics.languages.most.svg" alt="Languages Indepth" width="100%">
     </td>
   </tr>
 
