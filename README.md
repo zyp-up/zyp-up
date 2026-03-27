@@ -8,7 +8,7 @@
   <a href="https://zyp-up.github.io/">
     <img src="https://img.shields.io/badge/Portfolio-zyp--up.github.io-58A6FF?style=flat-square&logo=github-pages&logoColor=white" alt="Portfolio">
   </a>
-  <a href="mailto:yunpengZhangup@outlook.com">
+  <a href="mailto:your-email@example.com">
     <img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email">
   </a>
   <img src="https://komarev.com/ghpvc/?username=zyp-up&style=flat-square&color=58A6FF" alt="Profile Views">
@@ -24,20 +24,33 @@
       <img src="./metrics.base.svg" alt="Base Metrics" width="100%">
     </td>
   </tr>
+  <!-- 第1行：Topics + Languages -->
   <tr>
     <td width="50%" align="center">
-      <img src="./metrics.iso.svg" alt="Isometric Calendar" width="100%">
+      <img src="./metrics.topics.svg" alt="Starred Topics" width="100%">
     </td>
     <td width="50%" align="center">
-      <img src="./metrics.languages.svg" alt="Languages Activity" width="100%">
+      <img src="./metrics.languages.svg" alt="Languages" width="100%">
     </td>
   </tr>
+  <!-- 第2行：日历 + 编码习惯 -->
   <tr>
     <td width="50%" align="center">
-      <img src="./metrics.achievements.svg" alt="Achievements" width="100%">
+      <img src="./metrics.isocalendar.svg" alt="Isometric Calendar" width="100%">
     </td>
     <td width="50%" align="center">
-      <img src="./metrics.habits.svg" alt="Coding Habits" width="100%">
+      <img src="./metrics.habits.facts.svg" alt="Coding Habits Facts" width="100%">
+      <br>
+      <img src="./metrics.habits.charts.svg" alt="Coding Habits Charts" width="100%">
+    </td>
+  </tr>
+  <!-- 第3行：许可证 + LeetCode -->
+  <tr>
+    <td width="50%" align="center">
+      <img src="./metrics.licenses.svg" alt="Licenses" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <img src="./metrics.leetcode.svg" alt="LeetCode" width="100%">
     </td>
   </tr>
 </table>
