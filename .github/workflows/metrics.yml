@@ -126,14 +126,14 @@ jobs:
           plugin_licenses_legal: no
           plugin_licenses_ratio: yes
 
-      # ===== 第3行右：LeetCode =====
-      - name: 🗳️ LeetCode
+      # ===== 第3行右：Achievements =====
+      - name: 🏆 Achievements
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.leetcode.svg
-          token: NOT_NEEDED
+          filename: metrics.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
           base: ""
-          plugin_leetcode: yes
-          plugin_leetcode_user: "@Y0"
-          plugin_leetcode_sections: solved, skills, recent
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: C
