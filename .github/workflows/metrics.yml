@@ -48,8 +48,8 @@ jobs:
           plugin_topics: yes
           plugin_topics_limit: 12
 
-      # ===== 第1行右：Languages (Indepth) =====
-      - name: 🈷️ Languages (Indepth)
+      # ===== 第1行右：Languages =====
+      - name: 🈷️ Languages
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.languages.indepth.svg
@@ -58,19 +58,6 @@ jobs:
           base: ""
           plugin_languages: yes
           plugin_languages_sections: most-used
-          plugin_languages_details: bytes-size, percentage
-          plugin_languages_limit: 8
-
-      # ===== 第1行右：Languages (Recently used) =====
-      - name: 🈷️ Languages (Recently used)
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.languages.recent.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: zyp-up
-          base: ""
-          plugin_languages: yes
-          plugin_languages_sections: recently-used
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
 
