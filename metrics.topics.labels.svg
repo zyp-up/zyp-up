@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="68" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="97" class="">
     <defs>
         <style/>
     </defs>
@@ -17,8 +17,14 @@
                     <section>
                         <div class="topics fill-width">
                             <div class="label" title="Python is a dynamically typed programming language.">python</div>
+                            <div class="label" title="Linux is an open source kernel.">linux</div>
+                            <div class="label" title="Git is the most widely used version control system.">git</div>
+                            <div class="label" title="Docker is a platform built for developers to build and run applications.">docker</div>
                             <div class="label" title="Chrome is a web browser from the tech company Google.">chrome</div>
                             <div class="label" title="Artificial intelligence is the ability of a computer or machine to perform tasks commonly associated with intelligent beings.">artificial intelligence</div>
+                            <div class="label" title="You’re lookin’ at it.">github</div>
+                            <div class="label" title="PyTorch is an open source machine learning library.">pytorch</div>
+                            <div class="label" title="">diffusion</div>
                         </div>
                     </section>
                 </div>
