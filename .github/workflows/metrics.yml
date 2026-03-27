@@ -14,37 +14,67 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Metrics embed - Left
+      - name: Base Info (Top)
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.left.svg
+          filename: metrics.base.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           user: zyp-up
           template: classic
           base: header, activity, community, repositories
           config_timezone: Asia/Shanghai
-          config_display: large
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
-      - name: Metrics embed - Right
+          
+      - name: Isometric Calendar (Left 1)
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.right.svg
+          filename: metrics.iso.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           user: zyp-up
           template: classic
           base: ""
-          config_timezone: Asia/Shanghai
-          config_display: large
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          
+      - name: Languages (Right 1)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-up
+          template: classic
+          base: ""
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_colors: github
+          plugin_languages_details: bytes-size, percentage
+          
+      - name: Topics & Licenses (Left 2)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.topics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-up
+          template: classic
+          base: ""
+          plugin_topics: yes
+          plugin_topics_limit: 15
+          plugin_topics_mode: icons
+          plugin_licenses: yes
+          plugin_licenses_setup: npm, yarn, pnpm
+          
+      - name: Habits and WakaTime (Right 2)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.habits.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-up
+          template: classic
+          base: ""
           plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
-          plugin_topics: yes
-          plugin_topics_mode: icons
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 365
