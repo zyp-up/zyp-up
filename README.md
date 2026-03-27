@@ -52,9 +52,29 @@
 
 ### 📈 总体概览
 
-<p align="center">
-  <img src="./metrics.svg" alt="Metrics" width="100%">
-</p>
+<table align="center" width="100%">
+  <tr>
+    <td colspan="2" align="center">
+      <img src="./metrics.base.svg" alt="Base Info" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="./metrics.iso.svg" alt="Isometric Calendar" width="100%">
+    </td>
+    <td width="50%" valign="top">
+      <img src="./metrics.languages.svg" alt="Languages" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="./metrics.topics.svg" alt="Topics and Licenses" width="100%">
+    </td>
+    <td width="50%" valign="top">
+      <img src="./metrics.habits.svg" alt="Coding Habits" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
