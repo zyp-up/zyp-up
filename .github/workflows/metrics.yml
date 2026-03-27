@@ -1,50 +1,133 @@
 name: Metrics
 
 on:
+  # 每12小时运行一次
   schedule:
-    - cron: "0 * * * *"  # 每小时运行一次
-  workflow_dispatch:     # 允许手动触发
+    - cron: "0 */12 * * *"
+  # 允许手动触发
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  github-metrics:
+  metrics:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-      - uses: lowlighter/metrics@latest
+      # 1️⃣ 等距提交日历 (Isometric commit calendar)
+      - name: 📅 Isometric commit calendar
+        uses: lowlighter/metrics@latest
         with:
+          filename: metrics.plugin.isocalendar.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          user: zyp-up
-          
-          # 基础配置
-          template: classic
-          base: header,activity,repositories,languages
-          config_timezone: Asia/Shanghai
-          
-          # 输出配置
-          output_action: commit
-          output_condition: data-changed
-          
-          # 插件:代码语言
+          user: zyp-yp
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      # 2️⃣ 编程语言统计 (Most used languages)
+      - name: 🈷️ Most used languages
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: ""
           plugin_languages: yes
-          plugin_languages_limit: 8
-          
-          # 插件:最近活动
-          plugin_activity: yes
-          plugin_activity_days: 14
-          plugin_activity_limit: 5
-          plugin_activity_visibility: public
-          
-          # 插件:许可证信息  
+          plugin_languages_analysis_type: most-used
+          plugin_languages_limit: 10
+          plugin_languages_threshold: 0%
+
+      # 3️⃣ 标星话题 (Starred topics)
+      - name: 📌 Starred topics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.topics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: ""
+          plugin_topics: yes
+          plugin_topics_limit: 15
+          plugin_topics_mode: icons
+
+      # 4️⃣ 仓库许可证 (Repository licenses)
+      - name: 📜 Repository licenses
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.licenses.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: ""
           plugin_licenses: yes
-          plugin_licenses_limit: 3
-          
-          # 插件:WakaTime 代码时间统计
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_days: 7
-          plugin_wakatime_sections: time,languages,projects
-          plugin_wakatime_limit: 5
-          plugin_wakatime_url: https://wakatime.com
-          plugin_wakatime_user: zyp-up
+          plugin_licenses_open: yes
+          plugin_licenses_ratio: yes
+
+      # 5️⃣ 编码习惯 (Coding habits)
+      - name: 💡 Coding habits
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.habits.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: ""
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_trim: yes
+
+      # 6️⃣ 问题/PR跟进 (Follow-up of issues and pull requests)
+      - name: 🎟️ Follow-up of issues and pull requests
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.followup.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: ""
+          plugin_followup: yes
+          plugin_followup_sections: repositories
+
+      # 7️⃣ 最近活动 (Recent activity)
+      - name: 📰 Recent activity
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.activity.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: ""
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_visibility: all
+          plugin_activity_days: 14
+
+      # 8️⃣ 最近文章 (Recent posts)
+      - name: ✒️ Recent posts
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.posts.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: ""
+          plugin_posts: yes
+          plugin_posts_source: dev.to
+          plugin_posts_limit: 4
+
+      # 总体概览卡片 (Classic overview)
+      - name: 📊 Classic metrics overview
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-yp
+          base: header,activity,community,repositories,metadata
+          plugin_isocalendar: yes
+          plugin_achievements: yes
+          plugin_achievements_only: sponsor,maintainer,user
+
+      # 提交生成的SVG文件到仓库
+      - name: Commit metrics
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update metrics [skip ci]"
+          file_pattern: |
+            metrics*.svg
+          skip_dirty_check: false

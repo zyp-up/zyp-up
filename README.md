@@ -48,9 +48,70 @@
 
 ## 📊 GitHub Metrics（实时统计）
 
-> 使用 [GitHub Metrics](https://github.com/lowlighter/metrics) 生成详细的 GitHub 统计信息
+> 使用 [GitHub Metrics](https://github.com/lowlighter/metrics) 通过 GitHub Actions 自动生成和更新实时统计数据
 
+### 📈 总体概览
 ![Metrics](./metrics.svg)
+
+### 🎯 详细统计卡片
+
+#### 📅 等距提交日历 | 🈷️ 编程语言统计
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img alt="Isometric commit calendar" src="./metrics.plugin.isocalendar.svg">
+      </td>
+      <td align="center" width="50%">
+        <img alt="Most used languages" src="./metrics.plugin.languages.svg">
+      </td>
+    </tr>
+  </table>
+</div>
+
+#### 📌 标星话题 | 📜 仓库许可证
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img alt="Starred topics" src="./metrics.plugin.topics.svg">
+      </td>
+      <td align="center" width="50%">
+        <img alt="Repository licenses" src="./metrics.plugin.licenses.svg">
+      </td>
+    </tr>
+  </table>
+</div>
+
+#### 💡 编码习惯 | 🎟️ 问题/PR跟进
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img alt="Coding habits" src="./metrics.plugin.habits.svg">
+      </td>
+      <td align="center" width="50%">
+        <img alt="Follow-up of issues and pull requests" src="./metrics.plugin.followup.svg">
+      </td>
+    </tr>
+  </table>
+</div>
+
+#### 📰 最近活动 | ✒️ 最近文章
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <img alt="Recent activity" src="./metrics.plugin.activity.svg">
+      </td>
+      <td align="center" width="50%">
+        <img alt="Recent posts" src="./metrics.plugin.posts.svg">
+      </td>
+    </tr>
+  </table>
+</div>
+
+> 💡 **提示：** 这些统计数据每12小时自动更新一次，通过 GitHub Actions 工作流程自动生成
 
 ---
 
