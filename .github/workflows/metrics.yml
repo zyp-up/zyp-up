@@ -25,11 +25,11 @@ jobs:
           base: header, activity, community, repositories
           config_timezone: Asia/Shanghai
 
-      # ===== 第1行左：Starred Topics =====
-      - name: 📌 Starred Topics
+      # ===== 第1行左：Starred Topics (Icons) =====
+      - name: 📌 Starred Topics (Icons)
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.topics.svg
+          filename: metrics.topics.icons.svg
           token: NOT_NEEDED
           user: zyp-up
           base: ""
@@ -37,19 +37,49 @@ jobs:
           plugin_topics_limit: 0
           plugin_topics_mode: icons
 
-      # ===== 第1行右：语言统计（深度分析） =====
-      - name: 🈷️ Languages
+      # ===== 第1行左：Starred Topics (Labels) =====
+      - name: 📌 Starred Topics (Labels)
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.languages.svg
+          filename: metrics.topics.labels.svg
+          token: NOT_NEEDED
+          user: zyp-up
+          base: ""
+          plugin_topics: yes
+          plugin_topics_limit: 12
+
+      # ===== 第1行右：Languages (Indepth) =====
+      - name: 🈷️ Languages (Indepth)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.languages.indepth.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
           base: ""
           plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_colors: github
+          plugin_languages_indepth: yes
+          plugin_languages_details: lines, bytes-size
+          plugin_languages_limit: 4
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile, qmake,
+            lex, cmake, shell, gnuplot
+
+      # ===== 第1行右：Languages (Recently used) =====
+      - name: 🈷️ Languages (Recently used)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.languages.recent.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          plugin_languages: yes
+          plugin_languages_sections: recently-used
           plugin_languages_details: bytes-size, percentage
-          plugin_languages_sections: most-used
+          plugin_languages_limit: 4
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile, qmake,
+            lex, cmake, shell, gnuplot
 
       # ===== 第2行左：等距日历（全年） =====
       - name: 📅 Isometric Calendar (Full Year)
@@ -88,11 +118,24 @@ jobs:
           plugin_habits_charts: yes
           config_timezone: Asia/Shanghai
 
-      # ===== 第3行左：仓库许可证 =====
-      - name: 📜 Repository Licenses
+      # ===== 第3行左：许可证（权限详情） =====
+      - name: 📜 Licenses (Permissions)
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.licenses.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          template: repository
+          repo: mainstream-transformer-based-language-models
+          plugin_licenses: yes
+          plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
+
+      # ===== 第3行左：许可证（比例图） =====
+      - name: 📜 Licenses (Ratio)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.licenses.ratio.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
           base: ""
@@ -112,5 +155,4 @@ jobs:
           user: zyp-up
           base: ""
           plugin_leetcode: yes
-          plugin_leetcode_user: @Y0
           plugin_leetcode_sections: solved, skills, recent
