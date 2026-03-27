@@ -50,7 +50,7 @@ jobs:
 
       # ===== 第1行右：Languages =====
       - name: 🈷️ Languages
-        uses: dkhokhlov/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.languages.most.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -63,7 +63,7 @@ jobs:
 
       # ===== 第2行左：等距日历（全年） =====
       - name: 📅 Isometric Calendar (Full Year)
-        uses: dkhokhlov/metrics@master
+        uses: lowlighter/metrics@latest
         with:
           filename: metrics.isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -74,7 +74,7 @@ jobs:
 
       # ===== 第2行右：编码习惯（事实） =====
       - name: 💡 Coding Habits (Facts)
-        uses: lowlighter/metrics@latest
+        uses: dkhokhlov/metrics@master
         with:
           filename: metrics.habits.facts.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -87,7 +87,7 @@ jobs:
 
       # ===== 第2行右：编码习惯（图表） =====
       - name: 💡 Coding Habits (Charts)
-        uses: lowlighter/metrics@latest
+        uses: dkhokhlov/metrics@master
         with:
           filename: metrics.habits.charts.svg
           token: ${{ secrets.METRICS_TOKEN }}
