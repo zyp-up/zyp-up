@@ -51,7 +51,10 @@
 > 使用 [GitHub Metrics](https://github.com/lowlighter/metrics) 通过 GitHub Actions 自动生成和更新实时统计数据
 
 ### 📈 总体概览
-![Metrics](./metrics.svg)
+
+<p align="center">
+  <img src="./metrics.svg" alt="Metrics" width="100%">
+</p>
 
 ---
 

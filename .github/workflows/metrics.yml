@@ -11,13 +11,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Metrics embed
-        uses: lowlighter/metrics@v3.34
-        
-      - name: Metrics embed
-        uses: lowlighter/metrics@v3.34
+        uses: lowlighter/metrics@latest
         with:
+          filename: metrics.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           user: zyp-up
           config_file: ./metrics.config.yml
