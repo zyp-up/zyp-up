@@ -19,13 +19,17 @@
 ## 📊 GitHub Metrics
 
 <table align="center" width="100%">
+  <!-- 第1行：Base Info + Achievements -->
   <tr>
-    <td colspan="2" align="center">
+    <td width="50%" align="center">
       <img src="./metrics.base.svg" alt="Base Metrics" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <img src="./metrics.achievements.svg" alt="Achievements" width="100%">
     </td>
   </tr>
 
-  <!-- 第1行：Topics + Languages -->
+  <!-- 第2行：Topics + Languages -->
   <tr>
     <td width="50%" align="center">
       <img src="./metrics.topics.icons.svg" alt="Starred Topics Icons" width="100%">
@@ -33,11 +37,11 @@
       <img src="./metrics.topics.labels.svg" alt="Starred Topics Labels" width="100%">
     </td>
     <td width="50%" align="center">
-      <img src="./metrics.languages.most.svg" alt="Languages Indepth" width="100%">
+      <img src="./metrics.languages.most.svg" alt="Languages" width="100%">
     </td>
   </tr>
 
-  <!-- 第2行：日历 + 编码习惯 -->
+  <!-- 第3行：日历 + 编码习惯 -->
   <tr>
     <td width="50%" align="center">
       <img src="./metrics.isocalendar.svg" alt="Isometric Calendar" width="100%">
@@ -46,18 +50,6 @@
       <img src="./metrics.habits.facts.svg" alt="Coding Habits Facts" width="100%">
       <br>
       <img src="./metrics.habits.charts.svg" alt="Coding Habits Charts" width="100%">
-    </td>
-  </tr>
-
-  <!-- 第3行：许可证 + LeetCode -->
-  <tr>
-    <td width="50%" align="center">
-      <img src="./metrics.licenses.svg" alt="Licenses Permissions" width="100%">
-      <br>
-      <img src="./metrics.licenses.ratio.svg" alt="Licenses Ratio" width="100%">
-    </td>
-    <td width="50%" align="center">
-      <img src="./metrics.achievements.svg" alt="achievements" width="100%">
     </td>
   </tr>
 </table>
