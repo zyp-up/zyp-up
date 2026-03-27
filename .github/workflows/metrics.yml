@@ -34,7 +34,6 @@ jobs:
           user: zyp-up
           base: ""
           plugin_topics: yes
-          plugin_topics_limit: 0
           plugin_topics_mode: icons
 
       # ===== 第1行左：Starred Topics (Labels) =====
@@ -46,7 +45,6 @@ jobs:
           user: zyp-up
           base: ""
           plugin_topics: yes
-          plugin_topics_limit: 12
 
       # ===== 第1行右：Languages =====
       - name: 🈷️ Languages
