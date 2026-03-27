@@ -1,8 +1,4 @@
-<h1 align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&random=false&width=500&lines=Hi+%F0%9F%91%8B%2C+I'm+Yunpeng+Zhang;Student+%40+China+Jiliang+University;Always+learning+new+things..." alt="Typing SVG" />
-  </a>
-</h1>
+
 
 <p align="center">
   <a href="https://zyp-up.github.io/">
@@ -15,8 +11,6 @@
 </p>
 
 ---
-
-## 📊 GitHub Metrics
 
 <table align="center" width="100%">
   <!-- 第1行：Base Info + Achievements -->
@@ -55,7 +49,3 @@
 </table>
 
 ---
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=58A6FF&height=80&section=footer" width="100%">
-</p>
