@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      # ===== 1. 总体概览（顶部横幅） =====
+      # ===== 顶部横幅：总体概览 =====
       - name: 📈 Base Info
         uses: lowlighter/metrics@latest
         with:
@@ -24,66 +24,95 @@ jobs:
           template: classic
           base: header, activity, community, repositories
           config_timezone: Asia/Shanghai
-          config_padding: 0, 8 + 0%
 
-      # ===== 2. 等距日历（左上） =====
-      - name: 📅 Isometric Calendar
+      # ===== 第1行左：Starred Topics =====
+      - name: 📌 Starred Topics
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.iso.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.topics.svg
+          token: NOT_NEEDED
           user: zyp-up
-          template: classic
           base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          config_padding: 0, 8 + 0%
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
 
-      # ===== 3. 语言统计（右上） =====
-      - name: 🈷️ Languages Activity
+      # ===== 第1行右：语言统计（深度分析） =====
+      - name: 🈷️ Languages (Indepth)
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
-          template: classic
           base: ""
           plugin_languages: yes
           plugin_languages_indepth: yes
-          plugin_languages_limit: 8
-          plugin_languages_colors: github
-          plugin_languages_details: bytes-size, percentage
-          plugin_languages_sections: most-used
-          plugin_languages_analysis_timeout: 30
-          config_padding: 0, 8 + 0%
+          plugin_languages_details: lines, bytes-size
+          plugin_languages_limit: 4
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile, qmake,
+            lex, cmake, shell, gnuplot
 
-      # ===== 4. 成就徽章（左下） =====
-      - name: 🏆 Achievements
+      # ===== 第2行左：等距日历（全年） =====
+      - name: 📅 Isometric Calendar (Full Year)
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.achievements.svg
+          filename: metrics.isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
-          template: classic
           base: ""
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: B
-          config_padding: 0, 8 + 0%
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
 
-      # ===== 5. 编码习惯（右下） =====
-      - name: 💡 Coding Habits
+      # ===== 第2行右：编码习惯（事实） =====
+      - name: 💡 Coding Habits (Facts)
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.habits.svg
+          filename: metrics.habits.facts.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
-          template: classic
           base: ""
           plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 14
           plugin_habits_facts: yes
+          plugin_habits_charts: no
+          config_timezone: Asia/Shanghai
+
+      # ===== 第2行右：编码习惯（图表） =====
+      - name: 💡 Coding Habits (Charts)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.habits.charts.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          plugin_habits: yes
+          plugin_habits_facts: no
           plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
-          config_padding: 0, 8 + 0%
+          config_timezone: Asia/Shanghai
+
+      # ===== 第3行左：仓库许可证 =====
+      - name: 📜 Repository Licenses
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.licenses.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          template: repository
+          repo: mainstream-transformer-based-language-models
+          plugin_licenses: yes
+          plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
+          plugin_licenses_legal: no
+          plugin_licenses_ratio: yes
+
+      # ===== 第3行右：LeetCode =====
+      - name: 🗳️ LeetCode
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.leetcode.svg
+          token: NOT_NEEDED
+          user: zyp-up
+          base: ""
+          plugin_leetcode: yes
+          plugin_leetcode_sections: solved, skills, recent
