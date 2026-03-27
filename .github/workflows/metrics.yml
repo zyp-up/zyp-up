@@ -52,7 +52,7 @@ jobs:
       - name: 🈷️ Languages
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.languages.indepth.svg
+          filename: metrics.languages.most.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
           base: ""
