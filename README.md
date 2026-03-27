@@ -46,18 +46,23 @@
 
 ---
 
-## 📊 GitHub 统计
+## 📊 GitHub Metrics（实时统计）
 
+> 使用 [GitHub Metrics](https://github.com/lowlighter/metrics) 生成详细的 GitHub 统计信息
+
+### 📈 主要统计
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=zyp-up&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai" alt="GitHub Metrics" />
 </p>
 
+### 🗣️ 完整统计
 <p align="center">
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=zyp-up&theme=radical" alt="GitHub Streak" />
+  <img src="https://metrics.lecoq.io/zyp-up?template=github-dark&config.timezone=Asia%2FShanghai&config.display=large" alt="Full Metrics" />
 </p>
 
+### 📊 详细分析
 <p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zyp-up&layout=compact&theme=radical" alt="Top Languages" />
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&config.display=large&repositories=.starred" alt="Repositories" />
 </p>
 
 ---
@@ -66,55 +71,114 @@
 
 > 自动统计你的编码时间分布（由 [WakaTime](https://wakatime.com/) 驱动）
 
-[![wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=zyp-up&theme=radical)](https://wakatime.com)
+### 配置步骤：
 
-**如何启用自动统计：**
 1. 访问 [WakaTime](https://wakatime.com/) 并注册账号
 2. 在你的编辑器中安装 WakaTime 插件
-3. 将上面的 `YOUR_WAKATIME_USERNAME` 替换为你的 WakaTime 用户名
-4. 统计会自动更新！
+3. 在 Metrics 中启用 WakaTime 插件：
+
+```
+https://metrics.lecoq.io/zyp-up?template=classic&wakatime=YOUR_WAKATIME_API_KEY
+```
+
+4. 用你的 WakaTime API Key 替换 `YOUR_WAKATIME_API_KEY`（在 WakaTime 设置中获取）
+5. 统计会自动更新在 metrics 中！
 
 ---
 
 ## ⚡ 最近活动
 
-> 自动显示你最近的 GitHub 活动（实时更新）
+> 自动显示你最近的 GitHub 活动和贡献统计（实时更新）
 
-使用以下代码之一自动展示最近活动：
+<p align="center">
+  <img src="https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&activity=false&repositories=false" alt="Activity" />
+</p>
 
-### 方案 A: 使用 Activity Box（推荐）
-```markdown
-[![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=zyp-up&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
-```
-
-### 方案 B: 使用 GitHub API 自动生成
-```markdown
-<a href="https://github.com/zyp-up">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=zyp-up&show_icons=true&include_all_commits=true&theme=radical" alt="GitHub stats" />
-</a>
-```
-
-**替换 `YOUR_USERNAME` 为你的 GitHub 用户名，活动会自动显示！**
+> **Metrics 会自动显示你的：**
+> - 📊 提交记录
+> - 🔀 拉取请求
+> - 📝 Issues
+> - ⭐ Stars
+> - 🍴 Forks
+> - 等等...
 
 ---
 
-## 📈 详细统计信息
+## 📈 高级统计选项
 
-### 自动统计卡片（实时更新）
+> Metrics 支持 30+ 个插件，可以展示更多详细信息。以下是一些示例配置：
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=zyp-up&show_icons=true&include_all_commits=true&count_private=true&theme=radical" alt="GitHub Stats" />
-</p>
+### 💾 多个 Metrics 卡片配置
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zyp-up&layout=compact&hide_border=true&theme=radical" alt="Top Languages" />
-</p>
+#### 卡片 1: 完整统计
+```markdown
+https://metrics.lecoq.io/zyp-up?template=github-dark&config.timezone=Asia%2FShanghai
+```
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=zyp-up&theme=radical" alt="GitHub Streak" />
-</p>
+#### 卡片 2: 语言分布 + 活动
+```markdown
+https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&languages=1
+```
 
-> **只需将所有 `YOUR_USERNAME` 替换为你的 GitHub 用户名，其余数据会自动更新！** 🎉
+#### 卡片 3: 提交历史
+```markdown
+https://metrics.lecoq.io/zyp-up?template=classic&config.timezone=Asia%2FShanghai&repositories=0
+```
+
+### 🎨 自定义配置
+
+访问 [Metrics 配置文档](https://metrics.lecoq.io/about) 了解所有可用的参数和插件！
+
+可用的插件包括：
+- 📊 **基础统计** - Stars, Forks, Issues, PRs
+- 📈 **语言统计** - 编程语言分布
+- 🕐 **活动日历** - 提交热力图
+- 🌟 **排行榜** - 最赞的仓库
+- 💬 **最近评论** - 最近的活动
+- 🔗 **社交** - 关注者信息
+- 等等...
+
+---
+
+## 🤖 自动更新 Metrics（推荐）
+
+> 使用 GitHub Actions 自动生成和更新 Metrics 图片，每小时自动刷新一次
+
+### 配置步骤：
+
+1. **创建 `.github/workflows/metrics.yml` 文件**：
+
+```yaml
+name: Metrics
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: zyp-up
+          template: classic
+          base: ""
+          config_timezone: Asia/Shanghai
+          output_action: commit
+```
+
+2. **在 README 中使用生成的图片**：
+
+```markdown
+![Metrics](./github-metrics/metrics.svg)
+```
+
+3. **Commit 并 Push**，之后 GitHub Actions 会自动每小时生成 Metrics！
 
 ---
 
