@@ -3,15 +3,16 @@
   <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px"> Hi, I'm Yunpeng <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">
 </h1>
 
-<p align="center">
-  <a href="https://zyp-up.github.io/">
-    <img src="https://img.shields.io/badge/Portfolio-zyp--up.github.io-58A6FF?style=flat-square&logo=github-pages&logoColor=white" alt="Portfolio">
-  </a>
-  <a href="mailto:your-email@example.com">
-    <img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email">
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=zyp-up&style=flat-square&color=58A6FF" alt="Profile Views">
-</p>
+---
+
+### 🚀 About Me
+
+[Personal Website](https://zyp-up.github.io/)
+
+- Hi, I am... (To be added)
+- We are looking for... (To be added)
+- 📬 Email: [yunpengZhangup@outlook.com](mailto:yunpengZhangup@outlook.com) / [yunpengzhangup@gmail.com](mailto:yunpengzhangup@gmail.com)
+- <img src="https://komarev.com/ghpvc/?username=zyp-up&style=flat-square&color=gray&label=Views" alt="Profile Views" align="top">
 
 ---
 
