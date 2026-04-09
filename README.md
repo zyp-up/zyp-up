@@ -7,7 +7,7 @@
 
 ### 🚀 About Me
 
-[Personal Website](https://zyp-up.github.io/)
+[Personal Website](https://zyp-up.github.io/) | [LinkedIn](https://www.linkedin.com/in/yunpeng-zhang-83627b3ab/)
 
 - 👀 Hi, I'm Yunpeng Zhang, an AI practitioner passionate about pushing the boundaries of large model capabilities. My core work revolves around post-training of VLMs/LLMs, including SFT, RL, and data recipe design. Beyond that, I'm actively exploring AIGC, Agentic RL, and World Models — stay foolish, stay hungry.
 - 🧠 I'm committed to turning research ideas into practical, reproducible engineering work. I believe AI is not a weapon to replace humanity, but a force to liberate human productivity — freeing people to pursue the higher-value endeavors that are uniquely human.
