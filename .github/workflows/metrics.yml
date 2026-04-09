@@ -1,53 +1,139 @@
-name: Metrics
+name: Metrics Embed
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时执行一次
-  workflow_dispatch:      # 手动触发
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
   push:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  github-metrics:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Generate Metrics
+      # ===== 顶部横幅：总体概览 =====
+      - name: 📈 Base Info
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          filename: metrics.base.svg
+          token: ${{ secrets.METRICS_TOKEN }}
           user: zyp-up
           template: classic
-          base: header,activity,community,repositories
-          
-          # 插件配置
+          base: header, activity, community, repositories
+          config_timezone: Asia/Shanghai
+
+      # ===== 第1行左：Starred Topics (Icons) =====
+      - name: 📌 Starred Topics (Icons)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.topics.icons.svg
+          token: NOT_NEEDED
+          user: zyp-up
+          base: ""
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_topics_limit: 0
+
+      # ===== 第1行左：Starred Topics (Labels) =====
+      - name: 📌 Starred Topics (Labels)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.topics.labels.svg
+          token: NOT_NEEDED
+          user: zyp-up
+          base: ""
+          plugin_topics: yes
+          plugin_topics_limit: 0
+
+      # ===== 第1行右：Languages =====
+      - name: 🈷️ Languages
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.languages.most.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+
+      # ===== 第2行左：等距日历（全年） =====
+      - name: 📅 Isometric Calendar (Full Year)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          plugin_languages: yes
-          plugin_languages_limit: 10
-          plugin_topics: yes
-          plugin_topics_limit: 15
-          plugin_licenses: yes
-          plugin_licenses_ratio: yes
+
+      # ===== 第2行右：编码习惯（事实） =====
+      - name: 💡 Coding Habits (Facts)
+        uses: dkhokhlov/metrics@master
+        with:
+          filename: metrics.habits.facts.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
           plugin_habits: yes
           plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_followup: yes
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_posts: yes
-          plugin_posts_source: dev.to
-          plugin_posts_limit: 4
+          plugin_habits_charts: no
+          config_timezone: Asia/Shanghai
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      # ===== 第2行右：编码习惯（图表） =====
+      - name: 💡 Coding Habits (Charts)
+        uses: dkhokhlov/metrics@master
         with:
-          commit_message: "chore: update metrics"
-          file_pattern: metrics*.svg
-          skip_dirty_check: false
+          filename: metrics.habits.charts.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          plugin_habits: yes
+          plugin_habits_facts: no
+          plugin_habits_charts: yes
+          config_timezone: Asia/Shanghai
+
+      # ===== 第3行左：许可证（权限详情） =====
+      - name: 📜 Licenses (Permissions)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.licenses.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          template: repository
+          repo: mainstream-transformer-based-language-models
+          plugin_licenses: yes
+          plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
+
+      # ===== 第3行左：许可证（比例图） =====
+      - name: 📜 Licenses (Ratio)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.licenses.ratio.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          template: repository
+          repo: mainstream-transformer-based-language-models
+          plugin_licenses: yes
+          plugin_licenses_setup: bash -c '[[ -f package.json ]] && npm ci || true'
+          plugin_licenses_legal: no
+          plugin_licenses_ratio: yes
+
+      # ===== 第3行右：Achievements =====
+      - name: 🏆 Achievements
+        uses: dkhokhlov/metrics@master
+        with:
+          filename: metrics.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: zyp-up
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_threshold: C
