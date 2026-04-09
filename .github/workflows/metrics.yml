@@ -1,24 +1,53 @@
-name: Metrics Embed
+name: Metrics
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # 每12小时执行一次
-  workflow_dispatch:        # 手动触发
+    - cron: '0 * * * *'  # 每小时执行一次
+  workflow_dispatch:      # 手动触发
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: Metrics embed
-        uses: lowlighter/metrics@v3.34
-        
-      - name: Metrics embed
-        uses: lowlighter/metrics@v3.34
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Metrics
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: zyp-up
-          config_file: ./metrics.config.yml
+          template: classic
+          base: header,activity,community,repositories
           
+          # 插件配置
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          plugin_languages: yes
+          plugin_languages_limit: 10
+          plugin_topics: yes
+          plugin_topics_limit: 15
+          plugin_licenses: yes
+          plugin_licenses_ratio: yes
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_followup: yes
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_posts: yes
+          plugin_posts_source: dev.to
+          plugin_posts_limit: 4
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update metrics"
+          file_pattern: metrics*.svg
+          skip_dirty_check: false
