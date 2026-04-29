@@ -23,8 +23,8 @@
                             <div class="label" title="Chrome is a web browser from the tech company Google.">chrome</div>
                             <div class="label" title="Machine learning is a way of modeling and interpreting data that allows a piece of software to respond intelligently.">machine learning</div>
                             <div class="label" title="Artificial intelligence is the ability of a computer or machine to perform tasks commonly associated with intelligent beings.">artificial intelligence</div>
-                            <div class="label" title="You’re lookin’ at it.">github</div>
                             <div class="label" title="Machine learning models trained on vast amounts of text data to understand and generate human-like language.">large language model</div>
+                            <div class="label" title="You’re lookin’ at it.">github</div>
                             <div class="label" title="PyTorch is an open source machine learning library.">pytorch</div>
                             <div class="label" title="">vscode</div>
                             <div class="label" title="">diffusion</div>
