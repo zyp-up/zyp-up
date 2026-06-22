@@ -15,8 +15,9 @@
 
 🤝 Open to discussion and collaboration on AI-related projects — feel free to reach out!
 
-- 📬 Email: [yunpengZhangup@outlook.com](mailto:yunpengZhangup@outlook.com) / [yunpengzhangup@gmail.com](mailto:yunpengzhangup@gmail.com)
-- <img src="https://komarev.com/ghpvc/?username=zyp-up&style=flat-square&color=gray&label=Views" alt="Profile Views" align="top">
+📬 Email: [yunpengZhangup@outlook.com](mailto:yunpengZhangup@outlook.com) / [yunpengzhangup@gmail.com](mailto:yunpengzhangup@gmail.com)
+
+<img src="https://komarev.com/ghpvc/?username=zyp-up&style=flat-square&color=gray&label=Views" alt="Profile Views" align="top">
 
 ---
 
