@@ -9,9 +9,9 @@
 
 [Personal Website](https://zyp-up.github.io/) | [LinkedIn](https://www.linkedin.com/in/yunpeng-zhang-83627b3ab/)
 
-👀 Hi, I'm Yunpeng, an AI practitioner passionate about pushing the boundaries of large model capabilities. My core work revolves around post-training of VLMs/LLMs. My core work revolves around post-training of VLMs/LLMs, especially in RL/RLVR, reward design, data recipes and so on. Beyond that, I'm actively exploring AIGC, Agentic RL, World Models, Latent Reasoning — stay foolish, stay hungry.
+👀 Hi, I'm Yunpeng, an AI practitioner passionate about pushing the boundaries of large model capabilities. My research focuses on vision-language models, spatial reasoning, and embodied AI. Beyond that, my industry experience centers on Application & Post-training of LLMs, VLMs, especially in RL/RLVR
 
-🧠 I'm committed to turning research ideas into practical, reproducible engineering work. I believe AI is not a weapon to replace humanity, but a force to liberate human productivity — freeing people to pursue the higher-value endeavors that are uniquely human.
+🧠 I'm committed to turning research ideas into practical, reproducible engineering work. I believe AI is not a weapon to replace humans, but to reduce repetitive work and amplify productivity. People can spend more time on creativity, exploration, judgment, or pursue some values uniquely human.
 
 🤝 Open to discussion and collaboration on AI-related projects — feel free to reach out!
 
